@@ -2,16 +2,6 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 import logoAvatar from "../assets/profile-image.png"
 import { motion } from "framer-motion"
 
-const imgVariants  = {
-    hidden: { y: 0 },
-    visible: { 
-        y: 40,
-        transition: {
-        repeat: Infinity,
-        repeatType: "reverse",
-        duration: 3
-    }},
-}
 const divVariants = {
     hidden: {
         x: -10,
@@ -49,7 +39,7 @@ function Landing() {
     <div id="home" className="relative z-40 w-full h-screen flex items-center">
         <div className="flex gap-14 flex-col-reverse md:justify-between mx-[20px] md:mx-[50px] md:flex-row-reverse items-center">
             <div className="md:w-1/2 z-10 relative before:absolute before:z-[-1] before:w-[50%] before:h-full before:bg-transparent before:border-2 before:border-blue before:-top-10 before:left-[46%] before:-translate-x-1/2 before:rounded-t-full">
-                <motion.img variants={imgVariants} initial="hidden" animate="visible" className="w-[50%] mx-auto hover:filter hover:saturate-200 transition duration-500" alt="" src={logoAvatar} />
+                <motion.img variants={{hidden: { y: 0 },visible: { y: 40,transition: {repeat: Infinity,repeatType: "reverse", duration: 3}},}} initial="hidden" animate="visible" className="w-[50%] mx-auto hover:filter hover:saturate-200 transition duration-500" alt="" src={logoAvatar} />
             </div>
             <motion.div 
             variants={divVariants}
