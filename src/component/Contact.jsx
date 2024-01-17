@@ -4,14 +4,17 @@ import { motion } from "framer-motion"
 
 
 function Contact() {
-    const refText = useRef<HTMLInputElement>(null)
-    const refTextchild = useRef<HTMLParagraphElement>(null)
-    const refEmail = useRef<HTMLInputElement>(null)
-    const refEmailchild = useRef<HTMLParagraphElement>(null)
+    const refText = useRef(document.createElement("input"))
+    const refTextchild = useRef(document.createElement("p"))
+    const refEmail = useRef(document.createElement("input"))
+    const refEmailchild = useRef(document.createElement("p"))
+    
     const handleValue = () => {
+
         if (refText.current.value === "") {
             refTextchild.current.textContent = "This field is requird (Your Name)"
-        } else {
+         }
+        else {
             refTextchild.current.style.display = "none"
         }
         if (refEmail.current.value === "") {
