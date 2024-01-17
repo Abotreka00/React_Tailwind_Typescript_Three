@@ -1,0 +1,10 @@
+#root {
+  min-height: 1000px;
+  width: 100%;
+  background: #010026;
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
